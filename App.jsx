@@ -1,88 +1,76 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #fffaf7;
-  color: #333;
-}
+export default function App() {
+  const products = [
+    {
+      name: "Elegant Anarkali Suit ✨",
+      price: "₹1150",
+      image:
+        "https://i.ibb.co/DHQgM3nd/Whats-App-Image-2026-05-17-at-2-50-48-PM-1.jpg",
+    },
+    {
+      name: "Premium Cotton Suit 💖",
+      price: "₹1050",
+      image:
+        "https://i.ibb.co/gZPt5QqR/Whats-App-Image-2026-05-17-at-2-55-15-PM.jpg",
+    },
+    {
+      name: "Khadi Cord Set 👑",
+      price: "₹890",
+      image:
+        "https://i.ibb.co/S4LKMg83/Whats-App-Image-2026-05-17-at-3-01-35-PM-1.jpg",
+    },
+  ];
 
-a {
-  text-decoration: none;
-}
+  return (
+    <div>
+      <header>
+        <h1>NAVISH COLLECTION ✨</h1>
+        <p>Premium Ethnic Wear</p>
+      </header>
 
-header {
-  background: white;
-  padding: 20px;
-  border-bottom: 1px solid #eee;
-}
+      <section className="hero">
+        <img
+          src="https://i.ibb.co/3mb6DC58/Whats-App-Image-2026-05-17-at-2-50-47-PM.jpg"
+          alt="Hero"
+        />
 
-.hero {
-  background: #f8efe8;
-  padding: 40px 20px;
-  text-align: center;
-}
+        <h1>Elegant Ethnic Fashion 💖</h1>
 
-.hero img {
-  width: 100%;
-  max-width: 450px;
-  border-radius: 20px;
-}
+        <p>Premium suits for every occasion</p>
 
-.hero h1 {
-  font-size: 48px;
-  color: #5c3b2e;
-}
+        <a
+          className="btn"
+          href="https://wa.me/919660123397"
+        >
+          Shop On WhatsApp
+        </a>
+      </section>
 
-.hero p {
-  font-size: 20px;
-}
+      <section className="products">
+        {products.map((product) => (
+          <div className="card" key={product.name}>
+            <img src={product.image} alt={product.name} />
 
-.btn {
-  display: inline-block;
-  background: #9b6b5b;
-  color: white;
-  padding: 14px 24px;
-  border-radius: 12px;
-  margin: 10px;
-}
+            <div className="card-content">
+              <h3>{product.name}</h3>
 
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  padding: 40px 20px;
-}
+              <div className="price">{product.price}</div>
 
-.card {
-  background: white;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
+              <a
+                className="btn"
+                href="https://wa.me/919660123397"
+              >
+                Order Now
+              </a>
+            </div>
+          </div>
+        ))}
+      </section>
 
-.card img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-}
+      <footer>
+        <h2>Navish Collection 💖</h2>
 
-.card-content {
-  padding: 15px;
-  text-align: center;
-}
-
-.card h3 {
-  margin: 10px 0;
-}
-
-.price {
-  color: #9b6b5b;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-footer {
-  background: black;
-  color: white;
-  text-align: center;
-  padding: 50px 20px;
+        <p>Premium Ethnic Wear</p>
+      </footer>
+    </div>
+  );
 }
