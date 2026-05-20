@@ -1,4 +1,4 @@
-export default function NavishCollectionWebsite() {
+export default function App() {
   const heroImage = "https://i.ibb.co/3mb6DC58/Whats-App-Image-2026-05-17-at-2-50-47-PM.jpg";
 
   const products = [
